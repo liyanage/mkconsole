@@ -83,8 +83,8 @@ NSString *SCWatchdogChangedKeysKey             = @"SCWatchdogChangedKeys";
   }
 
   keys = [NSMutableArray arrayWithCapacity:1];
-  [keys addObject:(NSString *)SCDynamicStoreKeyCreate(NULL, 
-                                     (CFStringRef)@"State:/Network/Global/IPv4")];
+  NSString *key = (NSString *)SCDynamicStoreKeyCreate(NULL, (CFStringRef)@"State:/Network/Global/IPv4");
+  [keys addObject:[key autorelease]];
   
   status = SCDynamicStoreSetNotificationKeys(comRef, (CFArrayRef)keys, NULL);
   if (status == FALSE) {
@@ -104,6 +104,7 @@ NSString *SCWatchdogChangedKeysKey             = @"SCWatchdogChangedKeys";
   CFRunLoopAddSource(ourCFRunLoop,
                      scRunLoopSrc,
                      kCFRunLoopDefaultMode);
+  CFRelease(scRunLoopSrc);
 }
 
 /* SC notifications */

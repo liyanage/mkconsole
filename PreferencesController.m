@@ -205,7 +205,7 @@ static PreferencesController *sharedInstance = nil;
     NSArray			*draggedFilenames;
     NSEnumerator	*filenameEnum;
     NSString		*filename;
-    int				previousRow;
+    NSUInteger		previousRow;
 
     draggedFilenames = [[info draggingPasteboard] propertyListForType:NSFilenamesPboardType];
     filenameEnum = [draggedFilenames reverseObjectEnumerator];
@@ -319,8 +319,8 @@ static PreferencesController *sharedInstance = nil;
     NSMutableArray		*windowListDefault;
     NSMutableDictionary	*windowSettings;
 
-    windowListDefault = [[[NSUserDefaults standardUserDefaults] objectForKey:@"Windows"] mutableCopy];
-    windowSettings = [[windowListDefault objectAtIndex:0] mutableCopy];
+    windowListDefault = [[[[NSUserDefaults standardUserDefaults] objectForKey:@"Windows"] mutableCopy] autorelease];
+    windowSettings = [[[windowListDefault objectAtIndex:0] mutableCopy] autorelease];
     [windowSettings addEntriesFromDictionary:[self _getSettings]];
     [windowListDefault replaceObjectAtIndex:0 withObject:windowSettings];
     [[NSUserDefaults standardUserDefaults] setObject:windowListDefault forKey:@"Windows"];
