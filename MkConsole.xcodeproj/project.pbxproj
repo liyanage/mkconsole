@@ -431,7 +431,7 @@
 			buildConfigurationList = 035E96BC09FCB83600DDCC7F /* Build configuration list for PBXNativeTarget "MkConsoleElement" */;
 			buildPhases = (
 				035E969809FCB83600DDCC7F /* Headers */,
-				035E96A209FCB83600DDCC7F /* ShellScript */,
+				035E96A209FCB83600DDCC7F /* Copy Element Info.plist */,
 				035E96A309FCB83600DDCC7F /* Resources */,
 				035E96AB09FCB83600DDCC7F /* Sources */,
 				035E96B609FCB83600DDCC7F /* Frameworks */,
@@ -523,13 +523,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		035E96A209FCB83600DDCC7F /* ShellScript */ = {
+		035E96A209FCB83600DDCC7F /* Copy Element Info.plist */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
+			name = "Copy Element Info.plist";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -642,25 +643,25 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		035E96BD09FCB83600DDCC7F /* Development */ = {
+		035E96BD09FCB83600DDCC7F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = InfoElement.plist;
 				PRODUCT_NAME = MkConsoleElement;
 				WRAPPER_EXTENSION = app;
 			};
-			name = Development;
+			name = Debug;
 		};
-		035E96BE09FCB83600DDCC7F /* Deployment */ = {
+		035E96BE09FCB83600DDCC7F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = InfoElement.plist;
 				PRODUCT_NAME = MkConsoleElement;
 				WRAPPER_EXTENSION = app;
 			};
-			name = Deployment;
+			name = Release;
 		};
-		03D9532909F82454000B9A35 /* Development */ = {
+		03D9532909F82454000B9A35 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -669,9 +670,9 @@
 				PRODUCT_NAME = MkConsole;
 				WRAPPER_EXTENSION = app;
 			};
-			name = Development;
+			name = Debug;
 		};
-		03D9532A09F82454000B9A35 /* Deployment */ = {
+		03D9532A09F82454000B9A35 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -680,11 +681,12 @@
 				PRODUCT_NAME = MkConsole;
 				WRAPPER_EXTENSION = app;
 			};
-			name = Deployment;
+			name = Release;
 		};
-		03D9533109F82454000B9A35 /* Development */ = {
+		03D9533109F82454000B9A35 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
 				COPY_PHASE_STRIP = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
@@ -694,9 +696,9 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
 			};
-			name = Development;
+			name = Debug;
 		};
-		03D9533209F82454000B9A35 /* Deployment */ = {
+		03D9533209F82454000B9A35 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1)";
@@ -707,9 +709,9 @@
 				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
 				ZERO_LINK = NO;
 			};
-			name = Deployment;
+			name = Release;
 		};
-		ADBD4B7A0C57751600740990 /* Development */ = {
+		ADBD4B7A0C57751600740990 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
@@ -718,9 +720,9 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				PRODUCT_NAME = All;
 			};
-			name = Development;
+			name = Debug;
 		};
-		ADBD4B7B0C57751600740990 /* Deployment */ = {
+		ADBD4B7B0C57751600740990 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
@@ -729,7 +731,7 @@
 				PRODUCT_NAME = All;
 				ZERO_LINK = NO;
 			};
-			name = Deployment;
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
@@ -737,38 +739,38 @@
 		035E96BC09FCB83600DDCC7F /* Build configuration list for PBXNativeTarget "MkConsoleElement" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				035E96BE09FCB83600DDCC7F /* Deployment */,
-				035E96BD09FCB83600DDCC7F /* Development */,
+				035E96BE09FCB83600DDCC7F /* Release */,
+				035E96BD09FCB83600DDCC7F /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Deployment;
+			defaultConfigurationName = Release;
 		};
 		03D9532809F82454000B9A35 /* Build configuration list for PBXNativeTarget "MkConsole" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				03D9532A09F82454000B9A35 /* Deployment */,
-				03D9532909F82454000B9A35 /* Development */,
+				03D9532A09F82454000B9A35 /* Release */,
+				03D9532909F82454000B9A35 /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Deployment;
+			defaultConfigurationName = Release;
 		};
 		03D9533009F82454000B9A35 /* Build configuration list for PBXProject "MkConsole" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				03D9533209F82454000B9A35 /* Deployment */,
-				03D9533109F82454000B9A35 /* Development */,
+				03D9533209F82454000B9A35 /* Release */,
+				03D9533109F82454000B9A35 /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Deployment;
+			defaultConfigurationName = Release;
 		};
 		ADBD4B790C57751600740990 /* Build configuration list for PBXAggregateTarget "All" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				ADBD4B7B0C57751600740990 /* Deployment */,
-				ADBD4B7A0C57751600740990 /* Development */,
+				ADBD4B7B0C57751600740990 /* Release */,
+				ADBD4B7A0C57751600740990 /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Deployment;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
